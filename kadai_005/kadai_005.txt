@@ -1,0 +1,39 @@
+課題です。確認よろしくお願いします。
+
+
+$ mkdir git_challenge
+
+$ git init
+Initialized empty Git repository in C:/Users/shiji/IdeaProjects/Samurai/git_challenge/.git/
+
+$ echo "Hello,world!" >> hello_world.txt
+
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m "hello_world.txtを追加"
+[main (root-commit) ff2711c] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+
+$ echo "こんにちは、世界！" >> hello_world.txt
+
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m "(HEAD -> main)日本語訳を追記"
+[main 355bced] (HEAD -> main)日本語訳を追記
+ 1 file changed, 1 insertion(+)
+
+$ git log --oneline
+355bced (HEAD -> main) (HEAD -> main)日本語訳を追記
+ff2711c hello_world.txtを追加
+
+$ git commit --amend -m "日本語訳を追記"
+[main f24b47a] 日本語訳を追記
+ Date: Fri Aug 16 01:28:42 2024 +0900
+ 1 file changed, 1 insertion(+)
+
+$ git log --oneline
+f24b47a (HEAD -> main) 日本語訳を追記
+ff2711c hello_world.txtを追加
